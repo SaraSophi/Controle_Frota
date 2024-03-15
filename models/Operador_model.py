@@ -1,6 +1,6 @@
 from sqlalchemy.orm import mapped_column, Mapped
 from sqlalchemy import Integer, VARCHAR, ForeignKey
-from models import Base, Funcionario
+from models import Funcionario
 
 class Operador(Base):
     _tablename_ = "Operador"

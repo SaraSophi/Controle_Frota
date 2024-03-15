@@ -2,7 +2,7 @@ from sqlalchemy.orm import  mapped_column, Mapped
 from sqlalchemy import Integer, DATE, ForeignKey
 from models import Base, Motorista, Veiculo_model
 
-class CtVinculo(Base):
+class CtVinculo_model(Base):
     _tablename_= "CTVINCULO"
     id:               Mapped[int] = mapped_column(Integer, nullable=False, primary_key=True,autoincrement=True)
     dtVinculo:        Mapped[DATE]= mapped_column(DATE,    nullable=False)

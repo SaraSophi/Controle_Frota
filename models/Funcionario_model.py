@@ -2,7 +2,7 @@ from sqlalchemy.orm import  mapped_column, Mapped
 from sqlalchemy import Integer, VARCHAR, DATE, ForeignKey
 from models import Base, Pessoa
 
-class Funcionario(Base):
+class Funcionario_model(Base):
     _tablename_ = "FUNCIONARIO"
     nrMatricula:   Mapped[int] = mapped_column(Integer, nullable=False, autoincrement=True, primary_key=True)
     nmfuncionario: Mapped[str] = mapped_column(VARCHAR(100), nullable=False)

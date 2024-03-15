@@ -2,7 +2,7 @@ from sqlalchemy.orm import  mapped_column, Mapped
 from sqlalchemy import Integer, VARCHAR, ForeignKey
 from models import Base, Pessoa, Municipio
 
-class Endereco(Base):
+class Endereco_model(Base):
     _tablename_= "Endereco"
     idEndereco:          Mapped[int] = mapped_column(Integer, nullable=False, primary_key=True,autoincrement=True)
     dsLogradouro:        Mapped[str] = mapped_column(VARCHAR(200), nullable=False)

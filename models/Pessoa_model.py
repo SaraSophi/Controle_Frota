@@ -1,6 +1,6 @@
-from sqlalchemy.orm import  mapped_column, Mapped
+from sqlalchemy.orm import mapped_column, Mapped
 from sqlalchemy import Integer, VARCHAR, DATE, NUMERIC
-from models import Base
+from models.Veiculo_model import Base
 from sqlalchemy.schema import Sequence
 
 class Pessoa(Base):
