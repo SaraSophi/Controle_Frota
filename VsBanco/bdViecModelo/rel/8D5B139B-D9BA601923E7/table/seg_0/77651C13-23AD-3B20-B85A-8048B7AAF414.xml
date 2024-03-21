@@ -54,6 +54,28 @@
 <colAssociation fkAssociation="0B0C3588-1454-F367-721D-B1540EDCCB4A" referredColumn="42B5FBF2-9F2F-9151-918E-43590C1E678C"/>
 </associations>
 </Column>
+<Column name="nrFrota" id="AB86A574-BD85-224F-0E86-4794880007C6">
+<createdBy>kaiky_dneyfo2</createdBy>
+<createdTime>2024-03-16 19:08:32 UTC</createdTime>
+<ownerDesignName>bdViecModelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nrConjunto" id="FA91E2E5-0C5C-D360-8BB0-AFC8C61BFD3C">
+<createdBy>kaiky_dneyfo2</createdBy>
+<createdTime>2024-03-16 19:09:16 UTC</createdTime>
+<ownerDesignName>bdViecModelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="DAF82A3D-0199-9C10-95E7-8EAD8488A21A" name="CTENGATE_PK">

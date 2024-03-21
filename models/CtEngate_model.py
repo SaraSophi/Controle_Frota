@@ -1,10 +1,14 @@
-from sqlalchemy.orm import  mapped_column, Mapped
-from sqlalchemy import Integer, DATE, ForeignKey
-from models import Base, Veiculo_model
+from sqlalchemy.orm import relationship, declarative_base
+from sqlalchemy import Integer, DATE, ForeignKey, Column, NUMERIC
 
-class CtEngate_model(Base):
-    _tablename_= "CTENGATE"
-    id:             Mapped[int] = mapped_column(Integer, nullable=False, primary_key=True, autoincrement=True)
-    dtEngate:       Mapped[DATE]= mapped_column(DATE, nullable=False)
-    dtDesengate:    Mapped[DATE]= mapped_column(DATE, nullable=True)
-    veiculoIdVeic:  Mapped[int] = mapped_column(Integer, ForeignKey(Veiculo_model.idVeic))
+Base = declarative_base()
+
+class CtEngate(Base):
+    __tablename__ = "CTENGATE"
+    id            = Column(Integer, nullable=False, primary_key=True, autoincrement=True)
+    dtEngate      = Column(DATE, nullable=False)
+    dtDesengat    = Column(DATE, nullable=True)
+    nrFrota       = Column(NUMERIC(5), nullable=True)
+    veiculoIdVeic = Column(Integer, ForeignKey('Veiculo_model.idVeic'))
+
+    veiculo = relationship("Veiculo")

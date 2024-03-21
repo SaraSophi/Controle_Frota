@@ -68,6 +68,17 @@
 <colAssociation fkAssociation="732AE122-5452-540C-8B93-74B3204128D6" referredColumn="42B5FBF2-9F2F-9151-918E-43590C1E678C"/>
 </associations>
 </Column>
+<Column name="nrFrota" id="47F282CF-7CD9-530F-FF4F-91A134C425DB">
+<createdBy>kaiky_dneyfo2</createdBy>
+<createdTime>2024-03-16 19:09:42 UTC</createdTime>
+<ownerDesignName>bdViecModelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="07D15DB1-F5C5-4E49-0C4E-C7735AC44CEA" name="CTVINCULO_PK">
