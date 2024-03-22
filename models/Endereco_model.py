@@ -1,10 +1,11 @@
-from sqlalchemy.orm import  mapped_column, Mapped
-from sqlalchemy import Integer, VARCHAR, ForeignKey
+from sqlalchemy.orm import declarative_base
+from sqlalchemy import Integer, VARCHAR, ForeignKey, Column
 from models import Base, Pessoa, Municipio
 
+Base = declarative_base()
 class Endereco_model(Base):
     _tablename_= "Endereco"
-    idEndereco:          Mapped[int] = mapped_column(Integer, nullable=False, primary_key=True,autoincrement=True)
+    idEndereco = Column(Integer, nullable=False, primary_key=True,autoincrement=True)
     dsLogradouro:        Mapped[str] = mapped_column(VARCHAR(200), nullable=False)
     nrCasa:              Mapped[int] = mapped_column(Integer, nullable=False)
     nmBairro:            Mapped[str] = mapped_column(VARCHAR(100), nullable=False)

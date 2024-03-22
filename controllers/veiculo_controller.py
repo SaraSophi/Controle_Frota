@@ -1,8 +1,19 @@
-
+'''
 import re
 from datetime import datetime
 
-class Veiculo:
+class VeiculoController:
+    @staticmethod
+    def menu_veiculo():
+        MenuView.clear()
+        print("Menu de Produtos")
+        print("1 - Cadastrar Produto")
+        print("2 - Cadastrar Ingrediente")
+        print("3 - Listar Produtos")
+        print("4 - Listar Ingredientes")
+        print("0 - Voltar")
+
+        return MenuView.option()
     def __init__(self, idVeic, nrPlaca, dsModelo, tpTracao, nrRenavam, dtAquisicao, nrFrota, nrConjunto, nrChassi, tpCombustivel, anoVeic, dsMarca, qtEixo):        
         self.idVeic        = idVeic
         self.set_nrPlaca   (nrPlaca)
@@ -151,7 +162,7 @@ class Veiculo:
             return True
         except ValueError:
             return False
-'''
+
         #def validaCampos(self):
         #Validação dos campos obrigatorios
 
@@ -184,4 +195,67 @@ clOperacao      = Operacao()
 modelos         = ["FH500 - Volvo", "FH400 - Volvo"]
 tpCombustivel   = ["1- Diesel S10", "2- Diesel S500"]
 tpTracao        = ["Automotor", "Reboque", "SemiReboque"]
+
+
+
+class ConsultaVeiculoController:
+
+
+        @staticmethod
+        def menu_consulta():
+            MenuView.clear()
+            print("Menu de Produtos")
+            print("1 - Cadastrar Produto")
+            print("2 - Cadastrar Ingrediente")
+            print("3 - Listar Produtos")
+            print("4 - Listar Ingredientes")
+            print("0 - Voltar")
+
+            return MenuView.option()
+
 '''
+
+def cadastrar_veiculo(nrFrota, nrConjunto, nrPlaca, nrRenavam, nrChassi, qtdEixo, anoVeic, dsModelo, dsMarca, tpTracao, tpCombustivel, tpClassificacao, tpCategoria, tpOperacao, dtAquisicao):
+    veiculo = Veiculo(
+        nrFrota=nrFrota,
+        nrConjunto=nrConjunto,
+        nrPlaca=nrPlaca,
+        nrRenavam=nrRenavam,
+        nrChassi=nrChassi,
+        dsModelo=dsModelo,
+        dsMarca=dsMarca,
+        tpTracao=tpTracao,
+        tpCombustivel=tpCombustivel,
+        qtEixo=qtdEixo,
+        anoVeic=anoVeic,
+        dtAquisicao=dtAquisicao,
+        tpClassificacao=tpClassificacao,
+        tpOperacao=tpOperacao,
+        tpCategoria=tpCategoria
+    )
+    session.add(veiculo)
+    session.commit()
+
+def funcao_principal():
+    # Obter os dados do formulário
+    nrFrota = telaCadastro.nrFrota.text()
+    nrConjunto = telaCadastro.nrConjunto.text()
+    nrPlaca = telaCadastro.nrPlaca.text()
+    nrRenavam = telaCadastro.nrRenavam.text()
+    nrChassi = telaCadastro.nrChassi.text()
+    qtdEixo = telaCadastro.qtdEixo.text()
+    anoVeic = telaCadastro.anoVeic.text()
+    dsModelo = telaCadastro.dsModelo.currentText()
+    dsMarca = telaCadastro.dsMarca.currentText()
+    tpTracao = telaCadastro.tpTracao.currentText()
+    tpCombustivel = telaCadastro.tpCombustivel.currentText()
+    tpClassificacao = telaCadastro.tpClassificacao.currentText()
+    tpCategoria = telaCadastro.tpCategoria.currentText()
+    tpOperacao = telaCadastro.tpOperacao.currentText()
+    dtAquisicao = telaCadastro.dtAquisicao.date()
+
+    # Log dos dados do formulário
+    logger.debug(f"Dados do formulário: {nrFrota}, {nrConjunto}, {nrPlaca}, {nrRenavam}, {nrChassi}, {qtdEixo}, {anoVeic}, {dsModelo}, {dsMarca}, {tpTracao}, {tpCombustivel}, {tpClassificacao}, {tpCategoria}, {tpOperacao}, {dtAquisicao}")
+
+    # Chamar a função para cadastrar o veículo
+    cadastrar_veiculo(nrFrota, nrConjunto, nrPlaca, nrRenavam, nrChassi, qtdEixo, anoVeic, dsModelo, dsMarca, tpTracao, tpCombustivel, tpClassificacao, tpCategoria, tpOperacao, dtAquisicao)
