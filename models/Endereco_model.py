@@ -1,6 +1,6 @@
 from sqlalchemy.orm import declarative_base
 from sqlalchemy import Integer, VARCHAR, ForeignKey, Column
-from models import Base, Pessoa, Municipio
+from models import Pessoa, Municipio
 
 Base = declarative_base()
 class Endereco_model(Base):

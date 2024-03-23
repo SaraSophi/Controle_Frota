@@ -1,11 +1,9 @@
-from sqlalchemy.orm import  mapped_column, Mapped
-from sqlalchemy import Integer, VARCHAR, CHAR
-from models import Base
+from sqlalchemy.orm import declarative_base
+from sqlalchemy import Integer, VARCHAR, CHAR, Column
 
-
-class Uf(Base):
-    _tablename_ = "UF"
-    #id ou codigo? - > ajustar na tabela municipio
-    cdUf:    Mapped[int] = mapped_column(Integer,      nullable=False, autoincrement=True, primary_key=True)
-    nmUf:    Mapped[str] = mapped_column(VARCHAR(100), nullable=False)
-    dsSigla: Mapped[str] = mapped_column(CHAR(2),      nullable=False)
+Base = declarative_base()
+class Uf():
+    __tablename__ = "UF"
+    cdUf          = Column(Integer,      nullable=False, autoincrement=True, primary_key=True)
+    nmUf          = Column(VARCHAR(100), nullable=False)
+    dsSigla       = Column(CHAR(2),      nullable=False)
