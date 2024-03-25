@@ -645,7 +645,7 @@ border-color: rgb(0, 0, 0);</string>
      <string>Qtd Eixo</string>
     </property>
    </widget>
-   <widget class="QComboBox" name="tpClassificacao">
+   <widget class="QComboBox" name="tpVeiculo">
     <property name="geometry">
      <rect>
       <x>340</x>
@@ -679,27 +679,22 @@ border-color: rgb(0, 0, 0);</string>
     </item>
     <item>
      <property name="text">
-      <string>Caminhão</string>
+      <string>Bitrem</string>
      </property>
     </item>
     <item>
      <property name="text">
-      <string>Doly</string>
+      <string>Rodotrem</string>
      </property>
     </item>
     <item>
      <property name="text">
-      <string>Reboque</string>
+      <string>Bi-truck</string>
      </property>
     </item>
     <item>
      <property name="text">
-      <string>SemiReboque</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>Caminhão Trator</string>
+      <string/>
      </property>
     </item>
    </widget>
@@ -721,145 +716,17 @@ border-color: rgb(0, 0, 0);</string>
      </font>
     </property>
     <property name="text">
-     <string>Classificação</string>
+     <string>Tipo Veiculo</string>
     </property>
    </widget>
-   <widget class="QComboBox" name="tpCategoria">
+   <widget class="QLineEdit" name="idVeic">
     <property name="geometry">
      <rect>
-      <x>360</x>
-      <y>170</y>
-      <width>131</width>
+      <x>60</x>
+      <y>20</y>
+      <width>61</width>
       <height>21</height>
      </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Century</family>
-      <pointsize>11</pointsize>
-     </font>
-    </property>
-    <property name="toolTip">
-     <string>Selecione a opção de tração</string>
-    </property>
-    <property name="accessibleDescription">
-     <string>Tração</string>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 255, 255);</string>
-    </property>
-    <property name="currentText">
-     <string/>
-    </property>
-    <item>
-     <property name="text">
-      <string/>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>2</string>
-     </property>
-    </item>
-   </widget>
-   <widget class="QLabel" name="label_15">
-    <property name="geometry">
-     <rect>
-      <x>270</x>
-      <y>160</y>
-      <width>91</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Sitka Banner</family>
-      <pointsize>14</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>Categoria</string>
-    </property>
-   </widget>
-   <widget class="QComboBox" name="tpOperacao">
-    <property name="geometry">
-     <rect>
-      <x>360</x>
-      <y>360</y>
-      <width>151</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Century</family>
-      <pointsize>11</pointsize>
-     </font>
-    </property>
-    <property name="toolTip">
-     <string>Selecione a opção de tração</string>
-    </property>
-    <property name="accessibleDescription">
-     <string>Tração</string>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 255, 255);</string>
-    </property>
-    <property name="currentText">
-     <string/>
-    </property>
-    <item>
-     <property name="text">
-      <string/>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>Linha 24hrs</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>Linha Fixa </string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string/>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string/>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string/>
-     </property>
-    </item>
-   </widget>
-   <widget class="QLabel" name="label_16">
-    <property name="geometry">
-     <rect>
-      <x>270</x>
-      <y>360</y>
-      <width>81</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Sitka Banner</family>
-      <pointsize>14</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>Operação</string>
     </property>
    </widget>
   </widget>
