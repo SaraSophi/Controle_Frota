@@ -41,7 +41,7 @@ class CadastroVeiculoView(QtWidgets.QMainWindow):
             tpTracao        = self.tpTracao.currentText()
             dtAquisicao     = self.dtAquisicao.date().toPyDate()  # Mantido como objeto datetime
 
-            #Validações para cadastro efetivo no banco
+            #Validações para cadastro efetivo no banco  
             if not self.validar_placa(nrPlaca):
                 QMessageBox.critical(self, "Erro", "Placa inválida!")
                 return
@@ -104,13 +104,7 @@ class CadastroVeiculoView(QtWidgets.QMainWindow):
         anoAquisicao = dtAquisicao.year
         return anoVeic <= (anoAquisicao + 1) and anoVeic > 1980
 
-
-
-
-
-
-
-    def limpar_campos(self):
+    def limpar_campos(self): #Função para limpar a tela ao terminar o cadastro
 
         self.nrFrota.clear()
         self.nrConjunto.clear()
@@ -127,7 +121,7 @@ class CadastroVeiculoView(QtWidgets.QMainWindow):
         self.tpTracao.clear()
 
 
-if __name__ == "__main__":
+if __name__ == "__main__": #Inicando a tela
     app = QtWidgets.QApplication([])
     window = CadastroVeiculoView()
 
