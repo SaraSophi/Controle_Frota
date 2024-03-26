@@ -1,10 +1,13 @@
-'''
+from models.Classificacao import Classificacao
 from utils.create_db import create_db
-from controllers.app_controller import AppController
+from services.db import session
 
-if _name_ == "_main_":
-    create_db()
-    app = AppController()
-    app.menu()
+if __name__ == "__main__":
+    """create_db()"""
+    print("Teste")
 
-'''
+    response = session.query(Classificacao)
+
+    for classificacao in response:
+        print(classificacao.IDCLASSIFICACAO)
+        print(classificacao.DSCLASSIFICACAO)
