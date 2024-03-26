@@ -52,7 +52,7 @@ class CadastroVeiculoView(QtWidgets.QMainWindow):
                 QMessageBox.critical(self, "Erro", "Chassi inválido!")
                 return
             if not self.valida_ano(anoVeic, dtAquisicao):
-                QMessageBox.critical(self, "Erro", "O ano de fabricação do veículo não pode ser supeior a 1 ano a mais da data de aquisição!")
+                QMessageBox.critical(self, "Erro", "O ano de fabricação do veículo não pode ser supeior a 1 ano a mais da data de aquisição e infeiror a 1980!")
                 return
 
 
@@ -102,7 +102,7 @@ class CadastroVeiculoView(QtWidgets.QMainWindow):
 
     def valida_ano(self, anoVeic, dtAquisicao): #Verifica se o ano de fabricação de veiculo não é superior a 1 ano a mais do ano de aquisicao
         anoAquisicao = dtAquisicao.year
-        return anoVeic <= (anoAquisicao + 1)
+        return anoVeic <= (anoAquisicao + 1) and anoVeic > 1980
 
 
 
