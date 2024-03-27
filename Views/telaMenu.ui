@@ -64,8 +64,54 @@
      <pixmap>../Images/testcaminhao (2).jpeg</pixmap>
     </property>
    </widget>
+   <widget class="QPushButton" name="botaoEntrarCadastroUf">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>30</y>
+      <width>111</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string> Cadastro de UF</string>
+    </property>
+    <property name="autoDefault">
+     <bool>false</bool>
+    </property>
+    <property name="default">
+     <bool>false</bool>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="botaoCtVinculo">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>30</y>
+      <width>111</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Vincular motorista</string>
+    </property>
+    <property name="autoDefault">
+     <bool>false</bool>
+    </property>
+    <property name="default">
+     <bool>false</bool>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
+   </widget>
    <zorder>label</zorder>
    <zorder>botaoEntrarCadastroVeic</zorder>
+   <zorder>botaoEntrarCadastroUf</zorder>
+   <zorder>botaoCtVinculo</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
