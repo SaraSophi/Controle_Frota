@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>963</width>
+    <height>612</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,8 +17,8 @@
    <widget class="QPushButton" name="botaoEntrarCadastroVeic">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>20</y>
+      <x>10</x>
+      <y>30</y>
       <width>111</width>
       <height>51</height>
      </rect>
@@ -36,13 +36,43 @@
      <bool>false</bool>
     </property>
    </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>-20</x>
+      <y>-110</y>
+      <width>1031</width>
+      <height>841</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>0</width>
+      <height>731</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>1031</width>
+      <height>16777215</height>
+     </size>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../../../../../../../Downloads/testcaminhao (2).jpeg</pixmap>
+    </property>
+   </widget>
+   <zorder>label</zorder>
+   <zorder>botaoEntrarCadastroVeic</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>963</width>
      <height>21</height>
     </rect>
    </property>
