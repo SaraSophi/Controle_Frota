@@ -41,8 +41,21 @@ class CadastroVeiculoView(QtWidgets.QMainWindow):
             tpTracao        = self.tpTracao.currentText()
             dtAquisicao     = self.dtAquisicao.date().toPyDate()  # Mantido como objeto datetime
 
-            #Validações para cadastro efetivo no banco  
+            #Validações para cadastro efetivo no banco
+            erros = []
             if not self.validar_placa(nrPlaca):
+                erros.append("Placa inválida!")
+            if not self.validar_renavam(nrRenavam):
+                erros.append("Renavam inválido!")
+            if not self.valida_chassi(nrChassi):
+                erros.append("Chassi inválido!")
+            if not self.valida_ano(anoVeic, dtAquisicao):
+                erros.append(
+                    "O ano de fabricação do veículo não pode ser superior a 1 ano a mais da data de aquisição e inferior a 1980!")
+            if erros:
+                QMessageBox.critical(self, "Erro", "\n".join(erros))
+                return
+            '''if not self.validar_placa(nrPlaca):
                 QMessageBox.critical(self, "Erro", "Placa inválida!")
                 return
             if not self.validar_renavam(nrRenavam):
@@ -54,10 +67,7 @@ class CadastroVeiculoView(QtWidgets.QMainWindow):
             if not self.valida_ano(anoVeic, dtAquisicao):
                 QMessageBox.critical(self, "Erro", "O ano de fabricação do veículo não pode ser supeior a 1 ano a mais da data de aquisição e infeiror a 1980!")
                 return
-
-
-
-
+            '''
 
             novo_veiculo = Veiculo(NRPLACA=nrPlaca, DSMODELO=dsModelo, TPTRACAO=tpTracao,
                                    NRRENAVAM=nrRenavam, DTAQUISICAO=dtAquisicao, NRFROTA=nrFrota,
