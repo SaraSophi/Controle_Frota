@@ -2,7 +2,7 @@ from sqlalchemy.orm import mapped_column, Mapped
 from sqlalchemy import INTEGER, DATE, ForeignKey
 from models.Base import Base
 from datetime import datetime
-from Veiculo_model import Veiculo
+from models.Veiculo_model import Veiculo
 from sqlalchemy.schema import Sequence
 class CtVinculo(Base):
     __tablename__ = "CTVICULO"
