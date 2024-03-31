@@ -2,6 +2,7 @@ from PyQt5 import uic, QtWidgets
 from cadastro_veiculo_view import CadastroVeiculoView
 from cadastro_uf_view import  CadastroUf
 from vinculo_motorista_veiculo_view import  VincularMotorista
+from engate_desengate_view import EngateDesengateVeiculo
 class MenuInicial(QtWidgets.QMainWindow):
     def __init__(self):
         super().__init__()
@@ -10,9 +11,11 @@ class MenuInicial(QtWidgets.QMainWindow):
         self.botaoEntrarCadastroVeic.clicked.connect(self.ChamarCadastroVeiculo)
         self.botaoEntrarCadastroUf.clicked.connect(self.ChamarCadastroUf)
         self.botaoCtVinculo.clicked.connect(self.ChamarCtVinculoMotorista)
+        self.botaoEngateDesengate.clicked.connect(self.ChamarEngateDesengate)
         self.cadastro_veiculo_view = None
         self.cadastro_uf_view = None
         self.vinculo_motorista_veiculo_view = None
+        self.engate_desengate_view = None
 
 
     def ChamarCadastroVeiculo(self):
@@ -29,6 +32,11 @@ class MenuInicial(QtWidgets.QMainWindow):
         if not self.vinculo_motorista_veiculo_view:
             self.vinculo_motorista_veiculo_view = VincularMotorista()
         self.vinculo_motorista_veiculo_view.show()
+
+    def ChamarEngateDesengate(self):
+        if not self.engate_desengate_view:
+            self.engate_desengate_view = EngateDesengateVeiculo()
+        self.engate_desengate_view.show()
 
 
 
