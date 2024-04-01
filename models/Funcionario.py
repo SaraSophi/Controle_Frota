@@ -9,4 +9,4 @@ class Funcionario(Base):
     NMFUNCIONARIO: Mapped[str]      = mapped_column(VARCHAR(100), nullable=False)
     DSFUNCAO:      Mapped[str]      = mapped_column(VARCHAR(100), nullable=False)
     DTADMISSAO:    Mapped[datetime] = mapped_column(DATE,         nullable=False)
-    IDVEICULO:     Mapped[int]      = mapped_column(INTEGER, ForeignKey(Pessoa.IDPESSOA), nullable=False)
+    PESSOA_IDPESSOA:     Mapped[int]      = mapped_column(INTEGER, ForeignKey(Pessoa.IDPESSOA), nullable=False)

@@ -32,14 +32,14 @@ class CadastroVeiculoView(QtWidgets.QMainWindow):
             nrPlaca         = self.nrPlaca.text()
             nrRenavam       = self.nrRenavam.text()
             dsModelo        = self.dsModelo.currentText()
-            anoVeic         = int(self.anoVeic.text())  # Convertido para inteiro
+            anoVeic         = int(self.anoVeic.text())
             dsMarca         = self.dsMarca.currentText()
             tpVeiculo       = self.tpVeiculo.currentText()
             tpCombustivel   = self.tpCombustivel.currentText()
-            qtEixo          = int(self.qtdEixo.text())  # Convertido para inteiro
+            qtEixo          = int(self.qtdEixo.text())
             nrChassi        = self.nrChassi.text()
             tpTracao        = self.tpTracao.currentText()
-            dtAquisicao     = self.dtAquisicao.date().toPyDate()  # Mantido como objeto datetime
+            dtAquisicao     = self.dtAquisicao.date().toPyDate()
 
             #Validações para cadastro efetivo no banco
             erros = []
@@ -55,26 +55,12 @@ class CadastroVeiculoView(QtWidgets.QMainWindow):
             if erros:
                 QMessageBox.critical(self, "Erro", "\n".join(erros))
                 return
-            '''if not self.validar_placa(nrPlaca):
-                QMessageBox.critical(self, "Erro", "Placa inválida!")
-                return
-            if not self.validar_renavam(nrRenavam):
-                QMessageBox.critical(self, "Erro", "Renavam inválido!")
-                return
-            if not self.valida_chassi(nrChassi):
-                QMessageBox.critical(self, "Erro", "Chassi inválido!")
-                return
-            if not self.valida_ano(anoVeic, dtAquisicao):
-                QMessageBox.critical(self, "Erro", "O ano de fabricação do veículo não pode ser supeior a 1 ano a mais da data de aquisição e infeiror a 1980!")
-                return
-            '''
 
             novo_veiculo = Veiculo(NRPLACA=nrPlaca, DSMODELO=dsModelo, TPTRACAO=tpTracao,
                                    NRRENAVAM=nrRenavam, DTAQUISICAO=dtAquisicao, NRFROTA=nrFrota,
                                    NRCONJUNTO=nrConjunto, NRCHASSI=nrChassi, TPCOMBUSTIVEL=tpCombustivel,
                                    ANOVEIC=anoVeic, DSMARCA=dsMarca, QTEIXO=qtEixo,
                                    TPVEICULO=tpVeiculo)
-
             session.add(novo_veiculo)
             session.commit()
 
@@ -86,13 +72,10 @@ class CadastroVeiculoView(QtWidgets.QMainWindow):
         except Exception as e:
             session.rollback()
             QMessageBox.critical(self,"Erro", f"Ocorreu um erro ao realizar o cadastro: {e}")
-
-
     def validar_placa(self, nrPlaca):  #Validação da placa para Mercosul ou modelo antigo;
         padraoTradicional = r'^[A-Za-z]{3}\d{4}$'
         padraoMercosul = r'^[A-Za-z]{3}\d[A-Za-z]\d{2}$'
         return re.match(padraoTradicional, nrPlaca) or re.match(padraoMercosul, nrPlaca)
-
     def validar_renavam(self, nrRenavam):# Validação do renavam
         renavam = str(nrRenavam).zfill(11)
         if len(renavam) == 9:
@@ -115,7 +98,6 @@ class CadastroVeiculoView(QtWidgets.QMainWindow):
         return anoVeic <= (anoAquisicao + 1) and anoVeic > 1980
 
     def limpar_campos(self): #Função para limpar a tela ao terminar o cadastro
-
         self.nrFrota.clear()
         self.nrConjunto.clear()
         self.nrPlaca.clear()
@@ -130,11 +112,9 @@ class CadastroVeiculoView(QtWidgets.QMainWindow):
         self.nrChassi.clear()
         self.tpTracao.clear()
 
-
 if __name__ == "__main__": #Inicando a tela
     app = QtWidgets.QApplication([])
     window = CadastroVeiculoView()
-
     app.exec()
 
 

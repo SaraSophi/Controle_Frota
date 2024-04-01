@@ -18,6 +18,5 @@ class Veiculo(Base):
     ANOVEIC:       Mapped[int]      = mapped_column(INTEGER,      nullable=False)
     DSMARCA:       Mapped[str]      = mapped_column(VARCHAR(100), nullable=False)
     QTEIXO:        Mapped[int]      = mapped_column(INTEGER,      nullable=False)
-    #VEICULO_IDVEICULO:Mapped[int]= mapped_column(INTEGER, ForeignKey('VEICULO.IDVEICULO'))
     TPVEICULO:     Mapped[str]      = mapped_column(VARCHAR(100), nullable=False)
 

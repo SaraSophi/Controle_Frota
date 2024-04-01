@@ -4,7 +4,7 @@ from models.Uf import Uf
 from PyQt5.QtWidgets import QMessageBox
 from sqlalchemy.exc import IntegrityError
 import re
-class cadastroUf(QtWidgets.QMainWindow):
+class CadastroUf(QtWidgets.QMainWindow):
     def __init__(self):
         super().__init__()
         uic.loadUi('telaCadastroUf.ui', self)
@@ -48,6 +48,6 @@ class cadastroUf(QtWidgets.QMainWindow):
 
 if __name__ == "__main__": #Inicando a tela
     app = QtWidgets.QApplication([])
-    window = cadastroUf()
+    window = CadastroUf()
 
     app.exec()

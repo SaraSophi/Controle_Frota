@@ -23,6 +23,6 @@ session = Session()
 usuario = "C##CTFROTA"
 session.execute(text(f"ALTER SESSION SET CURRENT_SCHEMA = {usuario}"))
 
-result = session.execute(text("SELECT * FROM C##CTFROTA.veiculo"))
+'''result = session.execute(text("SELECT * FROM C##CTFROTA.veiculo"))
 for row in result:
-    print(row)
+    print(row)'''
