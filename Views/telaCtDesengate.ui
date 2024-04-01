@@ -14,24 +14,34 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="botaoSalvar">
+   <widget class="QLabel" name="label_4">
     <property name="geometry">
      <rect>
-      <x>210</x>
-      <y>280</y>
-      <width>75</width>
-      <height>23</height>
+      <x>420</x>
+      <y>90</y>
+      <width>101</width>
+      <height>31</height>
      </rect>
     </property>
     <property name="text">
-     <string>Engatar</string>
+     <string>Data do Desengate</string>
+    </property>
+   </widget>
+   <widget class="QDateEdit" name="dtDesengate">
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>90</y>
+      <width>110</width>
+      <height>22</height>
+     </rect>
     </property>
    </widget>
    <widget class="QLineEdit" name="nrFrota">
     <property name="geometry">
      <rect>
       <x>190</x>
-      <y>120</y>
+      <y>90</y>
       <width>113</width>
       <height>20</height>
      </rect>
@@ -41,7 +51,7 @@
     <property name="geometry">
      <rect>
       <x>100</x>
-      <y>110</y>
+      <y>80</y>
       <width>91</width>
       <height>31</height>
      </rect>
@@ -50,11 +60,21 @@
      <string>Número da Frota</string>
     </property>
    </widget>
+   <widget class="QLineEdit" name="nrConjunto">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>130</y>
+      <width>113</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
       <x>80</x>
-      <y>150</y>
+      <y>120</y>
       <width>101</width>
       <height>31</height>
      </rect>
@@ -63,50 +83,40 @@
      <string>Número do Conjunto</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="nrConjunto">
+   <widget class="QPushButton" name="botaoSalvar">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>250</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>SALVAR</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="nrIdEngate">
     <property name="geometry">
      <rect>
       <x>190</x>
-      <y>160</y>
+      <y>50</y>
       <width>113</width>
       <height>20</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QDateEdit" name="dtEngate">
-    <property name="geometry">
-     <rect>
-      <x>200</x>
-      <y>200</y>
-      <width>110</width>
-      <height>22</height>
      </rect>
     </property>
    </widget>
    <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>100</x>
-      <y>200</y>
-      <width>81</width>
-      <height>31</height>
+      <x>90</x>
+      <y>50</y>
+      <width>91</width>
+      <height>21</height>
      </rect>
     </property>
     <property name="text">
-     <string>Data do Engate</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="botaoTelaDesengate">
-    <property name="geometry">
-     <rect>
-      <x>520</x>
-      <y>280</y>
-      <width>75</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Desengatar</string>
+     <string>Número do engate</string>
     </property>
    </widget>
   </widget>
