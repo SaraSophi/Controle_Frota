@@ -37,25 +37,6 @@ color: rgb(255, 255, 255);</string>
 color: rgb(0, 0, 0);</string>
     </property>
    </widget>
-   <widget class="QDateEdit" name="dtDesvinculo">
-    <property name="geometry">
-     <rect>
-      <x>300</x>
-      <y>220</y>
-      <width>121</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>12</pointsize>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 255, 255);
-color: rgb(0, 0, 0);</string>
-    </property>
-   </widget>
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
@@ -171,8 +152,8 @@ background-color: rgb(0, 0, 0);</string>
    <widget class="QPushButton" name="botaoSalvar">
     <property name="geometry">
      <rect>
-      <x>300</x>
-      <y>330</y>
+      <x>120</x>
+      <y>320</y>
       <width>141</width>
       <height>41</height>
      </rect>
@@ -193,7 +174,7 @@ border-bottom-color: rgb(0, 0, 0);
 border-color: rgb(0, 0, 0);</string>
     </property>
     <property name="text">
-     <string>Salvar</string>
+     <string>Vincular</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_5">
@@ -238,34 +219,36 @@ background-color: rgb(0, 0, 0);
      <string>Vínculo e Desvinculo Motorista</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_2">
+   <widget class="QPushButton" name="botaoTelaDesvinculo">
     <property name="geometry">
      <rect>
-      <x>300</x>
-      <y>190</y>
-      <width>171</width>
-      <height>21</height>
+      <x>380</x>
+      <y>320</y>
+      <width>141</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>Sitka Banner</family>
+      <family>Segoe UI Black</family>
       <pointsize>18</pointsize>
       <weight>75</weight>
       <bold>true</bold>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(255, 255, 255);
-background-color: rgb(0, 0, 0);</string>
+     <string notr="true">color: rgb(0, 0, 0);
+background-color: rgb(176,224,230);
+alternate-background-color: rgb(0, 0, 0);
+border-bottom-color: rgb(0, 0, 0);
+border-color: rgb(0, 0, 0);</string>
     </property>
     <property name="text">
-     <string>Data Desvínculo</string>
+     <string>Desvincular</string>
     </property>
    </widget>
    <zorder>label_5</zorder>
    <zorder>dtVinculo</zorder>
-   <zorder>dtDesvinculo</zorder>
    <zorder>label</zorder>
    <zorder>matriculaMotorista</zorder>
    <zorder>label_3</zorder>
@@ -273,7 +256,7 @@ background-color: rgb(0, 0, 0);</string>
    <zorder>label_4</zorder>
    <zorder>botaoSalvar</zorder>
    <zorder>Title</zorder>
-   <zorder>label_2</zorder>
+   <zorder>botaoTelaDesvinculo</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
