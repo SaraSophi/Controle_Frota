@@ -11,6 +11,7 @@ class CadastroVeiculoView(QtWidgets.QMainWindow):
         super().__init__()
         uic.loadUi('telaCadastro.ui', self)
         self.criando_novo_veiculo()
+        self.lista_veic = []
         self.show()
 
     def criando_novo_veiculo(self):
@@ -23,6 +24,11 @@ class CadastroVeiculoView(QtWidgets.QMainWindow):
         for veic in response:
             self.lista_veic.append(veic)
 
+        return self.lista_veic
+
+    def lista_veiculo(self):
+        # Recupera a lista de veículos do banco de dados e a armazena na lista_veic
+        self.lista_veic = session.query(Veiculo).all()
         return self.lista_veic
 
     def registro_veiculo(self):
@@ -41,6 +47,20 @@ class CadastroVeiculoView(QtWidgets.QMainWindow):
             tpTracao        = self.tpTracao.currentText()
             dtAquisicao     = self.dtAquisicao.date().toPyDate()
 
+            # Validação Frota e Conjunto
+            if nrFrota and nrConjunto:
+                QMessageBox.critical(self, "Erro", "Apenas um dos campos 'Frota' ou 'Conjunto' deve ser preenchido.")
+                return
+
+            # Validação Frota não pode ser Reboque ou Semirreboque
+            if tpTracao in ["Reboque", "SemiReboque"] and nrFrota:
+                QMessageBox.critical(self, "Erro", "A frota não pode ser um Reboque/SemiReboque. Verifique se é um Conjunto ou Corrija a Tração do Veículo.")
+                return
+            # Validação Conjunto não pode ser Automotor
+            if tpTracao in ["Automotor"] and nrFrota:
+                QMessageBox.critical(self, "Erro", "A frota não pode ser um Reboque ou Semirreboque.")
+                return
+
             #Validações para cadastro efetivo no banco
             erros = []
             if not self.validar_placa(nrPlaca):
@@ -51,7 +71,7 @@ class CadastroVeiculoView(QtWidgets.QMainWindow):
                 erros.append("Chassi inválido!")
             if not self.valida_ano(anoVeic, dtAquisicao):
                 erros.append(
-                    "O ano de fabricação do veículo não pode ser superior a 1 ano a mais da data de aquisição e inferior a 1980!")
+                    "O ano de fabricação do veículo deve ser no máximo 1 ano após a data de aquisição e posterior a 1980.")
             if erros:
                 QMessageBox.critical(self, "Erro", "\n".join(erros))
                 return

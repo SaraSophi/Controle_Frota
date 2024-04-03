@@ -55,7 +55,7 @@ color: rgb(0, 0, 0);</string>
     </property>
     <property name="styleSheet">
      <string notr="true">color: rgb(255, 255, 255);
-background-color: rgb(0, 0, 0);</string>
+</string>
     </property>
     <property name="text">
      <string>Data Desvínculo</string>
@@ -81,7 +81,7 @@ background-color: rgb(0, 0, 0);</string>
     </property>
     <property name="styleSheet">
      <string notr="true">color: rgb(0, 0, 0);
-background-color: rgb(176,224,230);
+background-color: rgb(52, 235, 119);
 alternate-background-color: rgb(0, 0, 0);
 border-bottom-color: rgb(0, 0, 0);
 border-color: rgb(0, 0, 0);</string>
@@ -109,7 +109,7 @@ border-color: rgb(0, 0, 0);</string>
     </property>
     <property name="styleSheet">
      <string notr="true">color: rgb(255, 255, 255);
-background-color: rgb(0, 0, 0);</string>
+</string>
     </property>
     <property name="text">
      <string> Frota</string>
@@ -153,7 +153,7 @@ color: rgb(0, 0, 0);</string>
     </property>
     <property name="styleSheet">
      <string notr="true">color: rgb(255, 255, 255);
-background-color: rgb(0, 0, 0);</string>
+</string>
     </property>
     <property name="text">
      <string>Matrícula Motorista</string>
@@ -174,13 +174,14 @@ background-color: rgb(0, 0, 0);</string>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 255, 255);</string>
+     <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
     </property>
    </widget>
    <widget class="QLabel" name="fundo">
     <property name="geometry">
      <rect>
-      <x>-400</x>
+      <x>-360</x>
       <y>0</y>
       <width>941</width>
       <height>461</height>
@@ -193,10 +194,10 @@ background-color: rgb(0, 0, 0);</string>
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>../Images/Fundo cadastro.jpeg</pixmap>
+     <pixmap>../Images/testcaminhao (2).jpeg</pixmap>
     </property>
    </widget>
-   <widget class="QLineEdit" name="ds_modelo">
+   <widget class="QLineEdit" name="nrPlacaFrota">
     <property name="geometry">
      <rect>
       <x>110</x>
@@ -205,8 +206,13 @@ background-color: rgb(0, 0, 0);</string>
       <height>21</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
     <property name="text">
-     <string>descrição frota</string>
+     <string>PLACA</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="nm_motorista">
@@ -217,6 +223,11 @@ background-color: rgb(0, 0, 0);</string>
       <width>121</width>
       <height>21</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
     </property>
     <property name="cursor">
      <cursorShape>IBeamCursor</cursorShape>
@@ -233,7 +244,7 @@ background-color: rgb(0, 0, 0);</string>
    <zorder>nrFrota</zorder>
    <zorder>label_3</zorder>
    <zorder>matriculaMotorista</zorder>
-   <zorder>ds_modelo</zorder>
+   <zorder>nrPlacaFrota</zorder>
    <zorder>nm_motorista</zorder>
   </widget>
  </widget>

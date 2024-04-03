@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>648</width>
-    <height>516</height>
+    <width>654</width>
+    <height>457</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -20,8 +20,8 @@
    <widget class="QPushButton" name="botaoEntrarCadastroVeic">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>40</y>
+      <x>470</x>
+      <y>70</y>
       <width>151</width>
       <height>61</height>
      </rect>
@@ -53,8 +53,8 @@
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>-290</x>
-      <y>-140</y>
+      <x>-360</x>
+      <y>-190</y>
       <width>1031</width>
       <height>841</height>
      </rect>
@@ -75,47 +75,14 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>../Images/testcaminhao (2).jpeg</pixmap>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="botaoEntrarCadastroUf">
-    <property name="geometry">
-     <rect>
-      <x>40</x>
-      <y>140</y>
-      <width>151</width>
-      <height>61</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Segoe Print</family>
-      <pointsize>11</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="toolTip">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Selecione o botão para cadastrar Unidade Federativa.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-    </property>
-    <property name="text">
-     <string>Cadastro UF</string>
-    </property>
-    <property name="autoDefault">
-     <bool>false</bool>
-    </property>
-    <property name="default">
-     <bool>false</bool>
-    </property>
-    <property name="flat">
-     <bool>false</bool>
+     <pixmap>../Images/possibilidade 2.jpeg</pixmap>
     </property>
    </widget>
    <widget class="QPushButton" name="botaoCtVinculo">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>250</y>
+      <x>470</x>
+      <y>190</y>
       <width>151</width>
       <height>61</height>
      </rect>
@@ -147,8 +114,8 @@
    <widget class="QPushButton" name="botaoEngateDesengate">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>360</y>
+      <x>470</x>
+      <y>320</y>
       <width>151</width>
       <height>61</height>
      </rect>
@@ -179,7 +146,6 @@
    </widget>
    <zorder>label</zorder>
    <zorder>botaoEntrarCadastroVeic</zorder>
-   <zorder>botaoEntrarCadastroUf</zorder>
    <zorder>botaoCtVinculo</zorder>
    <zorder>botaoEngateDesengate</zorder>
   </widget>

@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>530</width>
+    <width>525</width>
     <height>437</height>
    </rect>
   </property>
@@ -22,7 +22,7 @@ color: rgb(255, 255, 255);</string>
     <property name="geometry">
      <rect>
       <x>50</x>
-      <y>260</y>
+      <y>240</y>
       <width>121</width>
       <height>21</height>
      </rect>
@@ -41,7 +41,7 @@ color: rgb(0, 0, 0);</string>
     <property name="geometry">
      <rect>
       <x>50</x>
-      <y>230</y>
+      <y>220</y>
       <width>141</width>
       <height>21</height>
      </rect>
@@ -56,7 +56,7 @@ color: rgb(0, 0, 0);</string>
     </property>
     <property name="styleSheet">
      <string notr="true">color: rgb(255, 255, 255);
-background-color: rgb(0, 0, 0);</string>
+</string>
     </property>
     <property name="text">
      <string>Data Vínculo</string>
@@ -67,7 +67,7 @@ background-color: rgb(0, 0, 0);</string>
      <rect>
       <x>50</x>
       <y>180</y>
-      <width>111</width>
+      <width>81</width>
       <height>21</height>
      </rect>
     </property>
@@ -102,7 +102,7 @@ background-color: rgb(0, 0, 0);</string>
     </property>
     <property name="styleSheet">
      <string notr="true">color: rgb(255, 255, 255);
-background-color: rgb(0, 0, 0);</string>
+</string>
     </property>
     <property name="text">
      <string>Matrícula Motorista</string>
@@ -147,9 +147,12 @@ color: rgb(0, 0, 0);</string>
       <bold>true</bold>
      </font>
     </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
     <property name="styleSheet">
      <string notr="true">color: rgb(255, 255, 255);
-background-color: rgb(0, 0, 0);</string>
+</string>
     </property>
     <property name="text">
      <string> Frota</string>
@@ -174,55 +177,13 @@ background-color: rgb(0, 0, 0);</string>
     </property>
     <property name="styleSheet">
      <string notr="true">color: rgb(0, 0, 0);
-background-color: rgb(176,224,230);
+background-color: rgb(52, 235, 119);
 alternate-background-color: rgb(0, 0, 0);
 border-bottom-color: rgb(0, 0, 0);
 border-color: rgb(0, 0, 0);</string>
     </property>
     <property name="text">
      <string>Vincular</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_5">
-    <property name="geometry">
-     <rect>
-      <x>-380</x>
-      <y>-20</y>
-      <width>961</width>
-      <height>521</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap>../Images/Fundo cadastro.jpeg</pixmap>
-    </property>
-   </widget>
-   <widget class="QLabel" name="Title">
-    <property name="geometry">
-     <rect>
-      <x>50</x>
-      <y>10</y>
-      <width>431</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Segoe UI Black</family>
-      <pointsize>20</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color: rgb(255, 255, 255);
-background-color: rgb(0, 0, 0);
-</string>
-    </property>
-    <property name="text">
-     <string>Vínculo e Desvinculo Motorista</string>
     </property>
    </widget>
    <widget class="QPushButton" name="botaoTelaDesvinculo">
@@ -244,7 +205,7 @@ background-color: rgb(0, 0, 0);
     </property>
     <property name="styleSheet">
      <string notr="true">color: rgb(0, 0, 0);
-background-color: rgb(176,224,230);
+background-color: rgb(52, 235, 119);
 alternate-background-color: rgb(0, 0, 0);
 border-bottom-color: rgb(0, 0, 0);
 border-color: rgb(0, 0, 0);</string>
@@ -256,11 +217,16 @@ border-color: rgb(0, 0, 0);</string>
    <widget class="QLineEdit" name="nm_motorista_2">
     <property name="geometry">
      <rect>
-      <x>170</x>
+      <x>140</x>
       <y>180</y>
       <width>121</width>
       <height>21</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
     </property>
     <property name="cursor">
      <cursorShape>IBeamCursor</cursorShape>
@@ -273,7 +239,7 @@ background-color: rgb(255, 255, 255);</string>
      <string>Nome Motora</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="ds_modelo_2">
+   <widget class="QLineEdit" name="nrPlacaFrota">
     <property name="geometry">
      <rect>
       <x>140</x>
@@ -287,10 +253,54 @@ background-color: rgb(255, 255, 255);</string>
 color: rgb(0, 0, 0);</string>
     </property>
     <property name="text">
-     <string>descrição frota</string>
+     <string>PLACA</string>
     </property>
    </widget>
-   <zorder>label_5</zorder>
+   <widget class="QLabel" name="Fundo_2">
+    <property name="geometry">
+     <rect>
+      <x>-340</x>
+      <y>-60</y>
+      <width>871</width>
+      <height>621</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../Images/testcaminhao (2).jpeg</pixmap>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_16">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>20</y>
+      <width>401</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI Black</family>
+      <pointsize>20</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);
+</string>
+    </property>
+    <property name="text">
+     <string>Vínculo Desvinculo Motorista</string>
+    </property>
+   </widget>
+   <zorder>Fundo_2</zorder>
    <zorder>dtVinculo</zorder>
    <zorder>label</zorder>
    <zorder>matriculaMotorista</zorder>
@@ -298,10 +308,10 @@ color: rgb(0, 0, 0);</string>
    <zorder>nrFrota</zorder>
    <zorder>label_4</zorder>
    <zorder>botaoSalvar</zorder>
-   <zorder>Title</zorder>
    <zorder>botaoTelaDesvinculo</zorder>
    <zorder>nm_motorista_2</zorder>
-   <zorder>ds_modelo_2</zorder>
+   <zorder>nrPlacaFrota</zorder>
+   <zorder>label_16</zorder>
   </widget>
  </widget>
  <resources/>
