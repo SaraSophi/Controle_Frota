@@ -6,22 +6,35 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>468</width>
+    <height>437</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Engatar Veículo</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QPushButton" name="botaoSalvar">
     <property name="geometry">
      <rect>
-      <x>210</x>
-      <y>280</y>
-      <width>75</width>
-      <height>23</height>
+      <x>30</x>
+      <y>330</y>
+      <width>121</width>
+      <height>41</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI</family>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(52, 235, 119);
+border-color: rgb(0, 0, 0);
+</string>
     </property>
     <property name="text">
      <string>Engatar</string>
@@ -30,97 +43,185 @@
    <widget class="QLineEdit" name="nrFrota">
     <property name="geometry">
      <rect>
-      <x>190</x>
-      <y>120</y>
-      <width>113</width>
-      <height>20</height>
+      <x>30</x>
+      <y>60</y>
+      <width>71</width>
+      <height>21</height>
      </rect>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label">
-    <property name="geometry">
-     <rect>
-      <x>100</x>
-      <y>110</y>
-      <width>91</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Número da Frota</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_2">
-    <property name="geometry">
-     <rect>
-      <x>80</x>
-      <y>150</y>
-      <width>101</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Número do Conjunto</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="nrConjunto">
     <property name="geometry">
      <rect>
-      <x>190</x>
-      <y>160</y>
-      <width>113</width>
-      <height>20</height>
+      <x>30</x>
+      <y>130</y>
+      <width>71</width>
+      <height>21</height>
      </rect>
     </property>
    </widget>
    <widget class="QDateEdit" name="dtEngate">
     <property name="geometry">
      <rect>
-      <x>200</x>
-      <y>200</y>
+      <x>30</x>
+      <y>190</y>
       <width>110</width>
       <height>22</height>
      </rect>
     </property>
    </widget>
-   <widget class="QLabel" name="label_3">
-    <property name="geometry">
-     <rect>
-      <x>100</x>
-      <y>200</y>
-      <width>81</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Data do Engate</string>
-    </property>
-   </widget>
    <widget class="QPushButton" name="botaoTelaDesengate">
     <property name="geometry">
      <rect>
-      <x>520</x>
-      <y>280</y>
-      <width>75</width>
-      <height>23</height>
+      <x>220</x>
+      <y>330</y>
+      <width>121</width>
+      <height>41</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI</family>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(52, 235, 119);
+border-color: rgb(0, 0, 0);
+</string>
     </property>
     <property name="text">
      <string>Desengatar</string>
     </property>
    </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>30</y>
+      <width>51</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Sitka Banner</family>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>Frota</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>100</y>
+      <width>71</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Sitka Banner</family>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>Conjunto</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>160</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Sitka Banner</family>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>Data desengate</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Fundo_2">
+    <property name="geometry">
+     <rect>
+      <x>-390</x>
+      <y>0</y>
+      <width>861</width>
+      <height>541</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../Images/testcaminhao (2).jpeg</pixmap>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="nrPlacaFrota">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>60</y>
+      <width>101</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>PLACA</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="nrPlacaConjunto">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>130</y>
+      <width>101</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>PLACA</string>
+    </property>
+   </widget>
+   <zorder>Fundo_2</zorder>
+   <zorder>botaoSalvar</zorder>
+   <zorder>nrFrota</zorder>
+   <zorder>nrConjunto</zorder>
+   <zorder>dtEngate</zorder>
+   <zorder>botaoTelaDesengate</zorder>
+   <zorder>label_3</zorder>
+   <zorder>label_4</zorder>
+   <zorder>label_5</zorder>
+   <zorder>nrPlacaFrota</zorder>
+   <zorder>nrPlacaConjunto</zorder>
   </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>800</width>
-     <height>21</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
  <connections/>

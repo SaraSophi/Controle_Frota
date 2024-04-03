@@ -6,25 +6,39 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>963</width>
-    <height>612</height>
+    <width>654</width>
+    <height>457</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Menu Principal</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QPushButton" name="botaoEntrarCadastroVeic">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>30</y>
-      <width>111</width>
-      <height>51</height>
+      <x>470</x>
+      <y>70</y>
+      <width>151</width>
+      <height>61</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>Segoe Print</family>
+      <pointsize>11</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="toolTip">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Selecione o botão para cadastrar Veículo.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
     <property name="text">
-     <string> Cadastro de veículo</string>
+     <string> Cadastro Veículo</string>
     </property>
     <property name="autoDefault">
      <bool>false</bool>
@@ -39,8 +53,8 @@
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>-10</x>
-      <y>-120</y>
+      <x>-360</x>
+      <y>-190</y>
       <width>1031</width>
       <height>841</height>
      </rect>
@@ -61,42 +75,31 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>../Images/testcaminhao (2).jpeg</pixmap>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="botaoEntrarCadastroUf">
-    <property name="geometry">
-     <rect>
-      <x>190</x>
-      <y>30</y>
-      <width>111</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string> Cadastro de UF</string>
-    </property>
-    <property name="autoDefault">
-     <bool>false</bool>
-    </property>
-    <property name="default">
-     <bool>false</bool>
-    </property>
-    <property name="flat">
-     <bool>false</bool>
+     <pixmap>../Images/possibilidade 2.jpeg</pixmap>
     </property>
    </widget>
    <widget class="QPushButton" name="botaoCtVinculo">
     <property name="geometry">
      <rect>
-      <x>360</x>
-      <y>30</y>
-      <width>111</width>
-      <height>51</height>
+      <x>470</x>
+      <y>190</y>
+      <width>151</width>
+      <height>61</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>Segoe Print</family>
+      <pointsize>11</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="toolTip">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Selecione o botão para acessar Vínculo motorista.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
     <property name="text">
-     <string>Vincular motorista</string>
+     <string>Vincular Motorista</string>
     </property>
     <property name="autoDefault">
      <bool>false</bool>
@@ -111,11 +114,22 @@
    <widget class="QPushButton" name="botaoEngateDesengate">
     <property name="geometry">
      <rect>
-      <x>520</x>
-      <y>30</y>
-      <width>111</width>
-      <height>51</height>
+      <x>470</x>
+      <y>320</y>
+      <width>151</width>
+      <height>61</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe Print</family>
+      <pointsize>11</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="toolTip">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Selecione o botão para acessar engate de Veículo.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
     <property name="text">
      <string>Engate/Desengate</string>
@@ -132,21 +146,9 @@
    </widget>
    <zorder>label</zorder>
    <zorder>botaoEntrarCadastroVeic</zorder>
-   <zorder>botaoEntrarCadastroUf</zorder>
    <zorder>botaoCtVinculo</zorder>
    <zorder>botaoEngateDesengate</zorder>
   </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>963</width>
-     <height>21</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
  <connections/>
