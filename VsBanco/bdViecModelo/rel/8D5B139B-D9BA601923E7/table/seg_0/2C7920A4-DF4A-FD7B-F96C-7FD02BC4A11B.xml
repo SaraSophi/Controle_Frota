@@ -149,34 +149,6 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="TPVEICULO_idTpVeiculo" id="87896BEC-9837-A061-FFB4-CD88DE379E72">
-<createdBy>Usuario</createdBy>
-<createdTime>2024-03-12 12:37:15 UTC</createdTime>
-<ownerDesignName>bdViecModelo</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-<previousColumn>false</previousColumn>
-<autoIncrementCycle>false</autoIncrementCycle>
-<associations>
-<colAssociation fkAssociation="9C6E4430-786B-B616-A18D-AE2CCC3FB049" referredColumn="28196105-8C73-BA3C-8D50-3C291527E569"/>
-</associations>
-</Column>
-<Column name="CLASSIFICACAO_idClassificacao" id="7C19240B-04F9-4CAF-8929-AE439EDADF86">
-<createdBy>Usuario</createdBy>
-<createdTime>2024-03-12 12:37:20 UTC</createdTime>
-<ownerDesignName>bdViecModelo</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-<previousColumn>false</previousColumn>
-<autoIncrementCycle>false</autoIncrementCycle>
-<associations>
-<colAssociation fkAssociation="AA6FA314-1E87-CDC1-8D3D-BE4C4616FB73" referredColumn="270A8D80-06C3-0B4B-EA04-8C3577FD293B"/>
-</associations>
-</Column>
 <Column name="VEICULO_idVeiculo" id="2C3E6806-D6BB-E12B-FAF7-7274BC962857">
 <createdBy>Usuario</createdBy>
 <createdTime>2024-03-12 12:40:24 UTC</createdTime>
@@ -191,6 +163,17 @@
 <associations>
 <colAssociation fkAssociation="F87749FE-E8F4-3611-B8D3-4A117E144DE7" referredColumn="42B5FBF2-9F2F-9151-918E-43590C1E678C"/>
 </associations>
+</Column>
+<Column name="Tpveiculo" id="42E4AFD0-5D77-BBCF-7D68-F1BB8C0E3406">
+<createdBy>kaiky_dneyfo2</createdBy>
+<createdTime>2024-04-03 01:06:25 UTC</createdTime>
+<ownerDesignName>bdViecModelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
@@ -215,26 +198,6 @@
 <colUsage columnID="042F4F64-AB60-808D-6832-C97320230061"/>
 <colUsage columnID="AF337046-A314-9BC9-8E56-5BC794AC12FC"/>
 <colUsage columnID="88F8C7AF-E00D-EF5F-6C22-CE1081E5F190"/>
-</indexColumnUsage>
-</ind_PK_UK>
-<ind_PK_UK id="9AC7068F-C265-96C2-BCAB-D6CC5B95F412" name="VEICULO_TPVEICULO_FK">
-<createdBy>Usuario</createdBy>
-<createdTime>2024-03-12 12:37:15 UTC</createdTime>
-<ownerDesignName>bdViecModelo</ownerDesignName>
-<indexState>Foreign Key</indexState>
-<isSurrogateKey>false</isSurrogateKey>
-<indexColumnUsage>
-<colUsage columnID="87896BEC-9837-A061-FFB4-CD88DE379E72"/>
-</indexColumnUsage>
-</ind_PK_UK>
-<ind_PK_UK id="DDD5569C-4AA9-4378-373B-CE4D03B6A52A" name="VEICULO_CLASSIFICACAO_FK">
-<createdBy>Usuario</createdBy>
-<createdTime>2024-03-12 12:37:20 UTC</createdTime>
-<ownerDesignName>bdViecModelo</ownerDesignName>
-<indexState>Foreign Key</indexState>
-<isSurrogateKey>false</isSurrogateKey>
-<indexColumnUsage>
-<colUsage columnID="7C19240B-04F9-4CAF-8929-AE439EDADF86"/>
 </indexColumnUsage>
 </ind_PK_UK>
 <ind_PK_UK id="6CF13180-6B2F-54BD-C16C-1356D73C8FA3" name="VEICULO_VEICULO_FK">
