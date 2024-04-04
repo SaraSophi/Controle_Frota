@@ -29,11 +29,7 @@ color: rgb(255, 255, 255);</string>
     </property>
     <property name="font">
      <font>
-<<<<<<< HEAD
-      <pointsize>12</pointsize>
-=======
       <pointsize>10</pointsize>
->>>>>>> 36660ec5a6bb8db9ab8c35c63d9d0ae047f8c2d8
      </font>
     </property>
     <property name="styleSheet">
@@ -165,13 +161,8 @@ color: rgb(0, 0, 0);</string>
    <widget class="QPushButton" name="botaoSalvar">
     <property name="geometry">
      <rect>
-<<<<<<< HEAD
-      <x>120</x>
-      <y>320</y>
-=======
       <x>50</x>
       <y>340</y>
->>>>>>> 36660ec5a6bb8db9ab8c35c63d9d0ae047f8c2d8
       <width>141</width>
       <height>41</height>
      </rect>
@@ -223,15 +214,6 @@ border-color: rgb(0, 0, 0);</string>
      <string>Desvincular</string>
     </property>
    </widget>
-<<<<<<< HEAD
-   <widget class="QPushButton" name="botaoTelaDesvinculo">
-    <property name="geometry">
-     <rect>
-      <x>380</x>
-      <y>320</y>
-      <width>141</width>
-      <height>41</height>
-=======
    <widget class="QLineEdit" name="nm_motorista_2">
     <property name="geometry">
      <rect>
@@ -239,15 +221,10 @@ border-color: rgb(0, 0, 0);</string>
       <y>180</y>
       <width>121</width>
       <height>21</height>
->>>>>>> 36660ec5a6bb8db9ab8c35c63d9d0ae047f8c2d8
      </rect>
     </property>
     <property name="font">
      <font>
-<<<<<<< HEAD
-      <family>Segoe UI Black</family>
-      <pointsize>18</pointsize>
-=======
       <pointsize>10</pointsize>
      </font>
     </property>
@@ -311,28 +288,16 @@ color: rgb(0, 0, 0);</string>
      <font>
       <family>Segoe UI Black</family>
       <pointsize>20</pointsize>
->>>>>>> 36660ec5a6bb8db9ab8c35c63d9d0ae047f8c2d8
       <weight>75</weight>
       <bold>true</bold>
      </font>
     </property>
     <property name="styleSheet">
-<<<<<<< HEAD
-     <string notr="true">color: rgb(0, 0, 0);
-background-color: rgb(176,224,230);
-alternate-background-color: rgb(0, 0, 0);
-border-bottom-color: rgb(0, 0, 0);
-border-color: rgb(0, 0, 0);</string>
-    </property>
-    <property name="text">
-     <string>Desvincular</string>
-=======
      <string notr="true">color: rgb(255, 255, 255);
 </string>
     </property>
     <property name="text">
      <string>Vínculo Desvinculo Motorista</string>
->>>>>>> 36660ec5a6bb8db9ab8c35c63d9d0ae047f8c2d8
     </property>
    </widget>
    <zorder>Fundo_2</zorder>
@@ -343,15 +308,10 @@ border-color: rgb(0, 0, 0);</string>
    <zorder>nrFrota</zorder>
    <zorder>label_4</zorder>
    <zorder>botaoSalvar</zorder>
-<<<<<<< HEAD
-   <zorder>Title</zorder>
-   <zorder>botaoTelaDesvinculo</zorder>
-=======
    <zorder>botaoTelaDesvinculo</zorder>
    <zorder>nm_motorista_2</zorder>
    <zorder>nrPlacaFrota</zorder>
    <zorder>label_16</zorder>
->>>>>>> 36660ec5a6bb8db9ab8c35c63d9d0ae047f8c2d8
   </widget>
  </widget>
  <resources/>
