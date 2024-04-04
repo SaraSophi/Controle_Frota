@@ -47,6 +47,12 @@ class CadastroVeiculoView(QtWidgets.QMainWindow):
             tpTracao        = self.tpTracao.currentText()
             dtAquisicao     = self.dtAquisicao.date().toPyDate()
 
+            campos_obrigatorios = [nrPlaca, nrRenavam, dsModelo, anoVeic, dsMarca, tpVeiculo, tpCombustivel, qtEixo,
+                                   nrChassi, tpTracao, dtAquisicao]
+            if any(campo == "" or campo is None for campo in campos_obrigatorios):
+                QMessageBox.critical(self, "Erro", "Todos os campos devem ser preenchidos.")
+                return
+
             # Validação Frota e Conjunto
             if nrFrota and nrConjunto:
                 QMessageBox.critical(self, "Erro", "Apenas um dos campos 'Frota' ou 'Conjunto' deve ser preenchido.")
@@ -57,8 +63,8 @@ class CadastroVeiculoView(QtWidgets.QMainWindow):
                 QMessageBox.critical(self, "Erro", "A frota não pode ser um Reboque/SemiReboque. Verifique se é um Conjunto ou Corrija a Tração do Veículo.")
                 return
             # Validação Conjunto não pode ser Automotor
-            if tpTracao in ["Automotor"] and nrFrota:
-                QMessageBox.critical(self, "Erro", "A frota não pode ser um Reboque ou Semirreboque.")
+            if tpTracao in ["Automotor"] and nrConjunto:
+                QMessageBox.critical(self, "Erro", "O Conjunto não pode ser um Automotor. Verifique se é uma Frota.")
                 return
 
             #Validações para cadastro efetivo no banco
@@ -94,12 +100,12 @@ class CadastroVeiculoView(QtWidgets.QMainWindow):
             QMessageBox.critical(self,"Erro", f"Ocorreu um erro ao realizar o cadastro: {e}")
     def validar_placa(self, nrPlaca):  #Validação da placa para Mercosul ou modelo antigo;
         padraoTradicional = r'^[A-Za-z]{3}\d{4}$'
-        padraoMercosul = r'^[A-Za-z]{3}\d[A-Za-z]\d{2}$'
+        padraoMercosul    = r'^[A-Za-z]{3}\d[A-Za-z]\d{2}$'
         return re.match(padraoTradicional, nrPlaca) or re.match(padraoMercosul, nrPlaca)
     def validar_renavam(self, nrRenavam):# Validação do renavam
-        renavam = str(nrRenavam).zfill(11)
+        renavam         = str(nrRenavam).zfill(11)
         if len(renavam) == 9:
-            renavam = "00" + renavam
+            renavam     = "00" + renavam
         elif len(renavam) != 11:
             return False
 
@@ -128,7 +134,7 @@ class CadastroVeiculoView(QtWidgets.QMainWindow):
         self.tpVeiculo.clear()
         self.tpCombustivel.clear()
         self.dtAquisicao.clear()
-        self.qtEixo.clear()
+        self.qtdEixo.clear()
         self.nrChassi.clear()
         self.tpTracao.clear()
 

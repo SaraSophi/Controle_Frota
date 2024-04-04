@@ -1,7 +1,7 @@
 from PyQt5 import uic, QtWidgets
 from cadastro_veiculo_view import CadastroVeiculoView
 from vinculo_motorista_veiculo_view import VincularMotorista
-from engate_desengate_view import EngateDesengateVeiculo
+from engate_view import EngateDesengateVeiculo
 class MenuInicial(QtWidgets.QMainWindow):
     def __init__(self):
         super().__init__()

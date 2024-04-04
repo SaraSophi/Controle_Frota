@@ -1,6 +1,7 @@
 from PyQt5 import uic, QtWidgets
 from PyQt5.QtWidgets import QMessageBox
 from services.db import session
+from sqlalchemy import text
 from models.CtVinculo import CtVinculo
 from models.Motorista import Motorista
 from models.Funcionario import Funcionario
@@ -34,26 +35,17 @@ class DesvincularMotorista(QtWidgets.QMainWindow):
             QMessageBox.critical(self, "Erro", f"Erro ao atualizar data de desengate: {str(e)}")
 
     def localizar_id_vinculo(self, nrFrota, nrMatricula):
-        id_veiculo = session.query(Veiculo.IDVEICULO).filter(Veiculo.NRFROTA == nrFrota).scalar()
-        id_motorista = session.query(Motorista.IDMOTORISTA).join(Funcionario,
-                                                                 Funcionario.NRMATRICULA == Motorista.FUNCIONARIO_NRMATRICULA).filter(
-            Motorista.FUNCIONARIO_NRMATRICULA == nrMatricula).scalar()
+        # Obtenha os IDs do veículo e do motorista a partir das consultas
+        id_veiculo = session.query(Veiculo.IDVEICULO).filter(Veiculo.NRFROTA == nrFrota).first()
+        id_motorista = session.query(Motorista).join(Funcionario, Funcionario.NRMATRICULA == Motorista.FUNCIONARIO_NRMATRICULA).filter(Motorista.FUNCIONARIO_NRMATRICULA == nrMatricula).first()
 
-        if id_veiculo is None or id_motorista is None:
-            return None
-
-        vinculos = session.query(CtVinculo.ID).filter(
+        # Localize o ID do engate com os atributos fornecidos e DTDESVINCULO nulo
+        id_vinculo = session.query(CtVinculo.ID).filter(
             CtVinculo.VEICULO_IDVEICULO == id_veiculo,
             CtVinculo.MOTORISTA_IDMOTORISTA == id_motorista,
             CtVinculo.DTDESVINCULO.is_(None)
-        ).all()
-
-        if len(vinculos) > 1:
-            raise ValueError("Múltiplos vínculos ativos encontrados para o mesmo motorista e veículo.")
-        elif len(vinculos) == 0:
-            return None
-        else:
-            return vinculos[0].ID
+        ).scalar()
+        return id_vinculo
 
 
 class VincularMotorista(QtWidgets.QMainWindow):
@@ -77,17 +69,6 @@ class VincularMotorista(QtWidgets.QMainWindow):
 
             id_motorista = VincularMotorista.procurar_motorista(nrMatricula)
             id_veiculo = VincularMotorista.procurar_frota(nrFrota)
-
-            erros = []
-
-            if not self.verificar_dt_desvinculo_nulo(nrMatricula, nrFrota):
-                erros.append("Motorista / veiculo já vinculado")
-                # Adicione a verificação do campo DTDESVINCULO nulo aqui
-            elif self.verificar_dt_desvinculo_nulo(id_veiculo, id_motorista):
-                erros.append("Motorista possui um vínculo ativo.")
-            if erros:
-                QMessageBox.critical(self, "Erro", "\n".join(erros))
-                return
 
             novo_vinculo = CtVinculo(DTVINCULO=dtVinculo, DTDESVINCULO=None,
                                      MOTORISTA_IDMOTORISTA=id_motorista, VEICULO_IDVEICULO=id_veiculo)
@@ -113,27 +94,6 @@ class VincularMotorista(QtWidgets.QMainWindow):
         response = session.query(Veiculo).filter(Veiculo.NRFROTA == nrFrota).first()
         id_veiculo = response.IDVEICULO
         return id_veiculo
-
-    def verificar_dt_desvinculo_nulo(self, id_veiculo, id_motorista):
-        # Verifica se existe algum vínculo ativo com o motorista e veículo especificados
-        vinculos = session.query(CtVinculo).filter(
-            CtVinculo.VEICULO_IDVEICULO == id_veiculo,
-            CtVinculo.MOTORISTA_IDMOTORISTA == id_motorista,
-            CtVinculo.DTDESVINCULO.is_(None)
-        ).count()
-        return vinculos > 0
-
-    '''def vinculado_or_no(self, nrMatricula, nrFrota):
-        id_motorista = VincularMotorista.procurar_motorista(nrMatricula)
-        id_veiculo = VincularMotorista.procurar_frota(nrFrota)
-
-        vinculos = session.query(CtVinculo.ID).filter(
-            CtVinculo.VEICULO_IDVEICULO == id_veiculo,
-            CtVinculo.MOTORISTA_IDMOTORISTA == id_motorista,
-            CtVinculo.DTDESVINCULO.is_(None)
-        ).count()
-
-        return vinculos == 0'''
 
     def chamar_tela_desvinculo(self):
         if not self.desvincula_view:
